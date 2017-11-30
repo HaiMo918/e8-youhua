@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="GBK"?>
+<module id="schedule" version="1.0.0">
+    <service-point id="deleteEML" interface="weaver.interfaces.schedule.CronJob">
+        <invoke-factory>
+            <construct class="weaver.system.DeleteEML">
+                <set property="cronExpr" value="0 59 23 * * ?" />
+            </construct>
+        </invoke-factory>
+    </service-point>
+    <service-point id="AutoCountApplyNumTask" interface="weaver.interfaces.schedule.CronJob">
+        <invoke-factory>
+            <construct class="weaver.formmode.quartz.AutoCountApplyNumTask">
+                <set property="cronExpr" value="0 0 0 * * ?" />
+            </construct>
+        </invoke-factory>
+    </service-point>
+    <service-point id="Mode4CptCalculateDeprecationJob" interface="weaver.interfaces.schedule.CronJob">
+        <invoke-factory>
+            <construct class="weaver.formmode.cuspage.cpt.job.Mode4CptCalculateDeprecationJob">
+                <set property="cronExpr" value="0 * 23 * * ?" />
+            </construct>
+        </invoke-factory>
+    </service-point>
+    <service-point id="Mode4CptDulldaysInventoryRemindJob" interface="weaver.interfaces.schedule.CronJob">
+        <invoke-factory>
+            <construct class="weaver.formmode.cuspage.cpt.job.Mode4CptDulldaysInventoryRemindJob">
+                <set property="cronExpr" value="0 0 23 * * ?" />
+            </construct>
+        </invoke-factory>
+    </service-point>
+    <service-point id="Mode4CptHighInventoryRemindJob" interface="weaver.interfaces.schedule.CronJob">
+        <invoke-factory>
+            <construct class="weaver.formmode.cuspage.cpt.job.Mode4CptHighInventoryRemindJob">
+                <set property="cronExpr" value="0 0 23 * * ?" />
+            </construct>
+        </invoke-factory>
+    </service-point>
+    <service-point id="Mode4CptLowInventoryRemindJob" interface="weaver.interfaces.schedule.CronJob">
+        <invoke-factory>
+            <construct class="weaver.formmode.cuspage.cpt.job.Mode4CptLowInventoryRemindJob">
+                <set property="cronExpr" value="0 0 23 * * ?" />
+            </construct>
+        </invoke-factory>
+    </service-point>
+    <service-point id="CptLowInventoryRemindJob" interface="weaver.interfaces.schedule.CronJob">
+        <invoke-factory>
+            <construct class="weaver.cpt.job.CptLowInventoryRemindJob">
+                <set property="cronExpr" value="0 0/5 * * * ?" />
+            </construct>
+        </invoke-factory>
+    </service-point>
+	<service-point id="WehelpuAction" interface="weaver.interfaces.schedule.CronJob">
+        <invoke-factory>
+            <construct class="weaver.interfaces.workflow.action.WehelpuAction">
+                <set property="cronExpr" value="0 30 0 * * ?" />
+            </construct>
+        </invoke-factory>
+    </service-point>
+	<service-point id="AutoSynStaffInfo" interface="weaver.interfaces.schedule.CronJob">
+        <invoke-factory>
+            <construct class="weaver.gat.AutoSynStaffInfo">
+             <set property="cronExpr" value="0 30 01 * * ?"/>
+            </construct>
+        </invoke-factory>
+    </service-point>
+	<service-point id="CreatePostionAjustAction" interface="weaver.interfaces.schedule.CronJob">
+        <invoke-factory>
+            <construct class="weaver.interfaces.workflow.action.CreatePostionAjustAction">
+             <set property="cronExpr" value="0 30 0 * * ?"/>
+            </construct>
+        </invoke-factory>
+    </service-point>
+	<service-point id="EmployeeLzAction" interface="weaver.interfaces.schedule.CronJob">
+        <invoke-factory>
+            <construct class="weaver.interfaces.workflow.action.EmployeeLzAction">
+             <set property="cronExpr" value="0 10 23 * * ?"/>
+            </construct>
+        </invoke-factory>
+    </service-point>
+	<service-point id="AutoTriggerLyWorkflow" interface="weaver.interfaces.schedule.CronJob">
+        <invoke-factory>
+            <construct class="weaver.interfaces.workflow.action.AutoTriggerLyWorkflow">
+             <set property="cronExpr" value="0 30 23 * * ?"/>
+            </construct>
+        </invoke-factory>
+    </service-point>
+	<service-point id="JDSEmployeeLzAction" interface="weaver.interfaces.schedule.CronJob">
+        <invoke-factory>
+            <construct class="weaver.interfaces.workflow.action.JDSEmployeeLzAction">
+             <set property="cronExpr" value="0 15 23 * * ?"/>
+            </construct>
+        </invoke-factory>
+    </service-point>
+</module>
+
