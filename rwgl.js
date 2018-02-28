@@ -2,10 +2,14 @@
 <script type="text/javascript">
 var _jllx="field10946";
 jQuery(document).ready(function(){
-   jQuery("#hide01").hide();   
+  //jQuery("#hide01").hide();   
+window.onload=function(){
+         f_jllx();
+};
  jQuery("#"+_jllx).change(function(){     
          f_jllx();
    });
+ 
 });
 function f_jllx(){  
     var va=jQuery("#"+_jllx).val();   
@@ -14,28 +18,7 @@ function f_jllx(){
     }else{ 
     jQuery("#field10953span").attr("value",""); 
     jQuery("#field10953span").html("");       
-    jQuery("#hide01").hide();  
+     jQuery("#hide01").hide();  
     }
 }   
 </script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
